@@ -53,14 +53,48 @@ td {
   border: 1px black solid;
 }
 
-footer {
-  border-top: 5px solid white;
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  background: linear-gradient(to top, #ffffff, #0094e3);
-  color: #fff;
-  padding: 0px;
+body.dark-mode {
+  background: #121212;
+  color: #ffffff;
+}
+
+body.dark-mode header {
+  background: linear-gradient(to bottom, #121212, #333333);
+  color: #ffffff;
+  border-bottom: 5px solid #222;
+}
+
+body.dark-mode nav ul li a {
+  color: #bb86fc;
+}
+
+body.dark-mode main {
+  background: #121212;
+  color: #ffffff;
+}
+
+body.dark-mode table {
+  border: 1px #444 solid;
+}
+
+body.dark-mode thead {
+  background-color: #444;
+  color: #ffffff;
+}
+
+body.dark-mode tr,
+body.dark-mode td {
+  border: 1px #444 solid;
+}
+
+body.dark-mode .highlight {
+  background-color: #444444;
+}
+
+body.dark-mode footer {
+  background: linear-gradient(to top, #121212, #333333);
+  color: #ffffff;
+  border-top: 5px solid #222;
 }
 
 button {
@@ -79,6 +113,15 @@ button {
 button:hover {
   background-color: #d6d6d6;
   transform: scale(1.1);
+}
+
+body.dark-mode button {
+  background-color: #333;
+  color: #ffffff;
+}
+
+body.dark-mode button:hover {
+  background-color: #444;
 }
 
 .centerform {

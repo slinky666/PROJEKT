@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles.css" />
-    <title>Nyheter - Kryptohörnan</title>
+    <title>Aktuella priser - Kryptohörnan</title>
   </head>
   <body>
     <header>
@@ -19,6 +19,7 @@
     </header>
 
     <main>
+      <button onclick="toggleDarkMode()">Växla mörkt läge</button>
       <h2>Senaste nyheterna</h2>
       <p>Här är de senaste nyheterna om kryptovalutor...</p>
       <table>
@@ -52,14 +53,19 @@
           </tr>
         </tbody>
       </table>
-      <h3>Rekommenderad Köp</h3>
-      <p id="recommended-coin">Loading...</p>
+      <div id="news-artiklar">
+        <p>Laddar nyheter...</p>
+      </div>
     </main>
 
     <footer>
       <p>&copy; 2024 Kryptohörnan. Alla rättigheter förbehållna.</p>
     </footer>
-
+    <script>
+      window.onbeforeunload = function () {
+        return "Du håller på att lämna Nyheter-sidan. Är du säker på att du vill göra det?";
+      };
+    </script>
     <script src="script.js"></script>
   </body>
 </html>

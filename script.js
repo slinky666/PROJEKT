@@ -27,6 +27,7 @@ function signup() {
     return false;
 }
 
+
 // Funktion för att logga in en användare
 function login() {
     // Hämta användarnamn och lösenord från formuläret
@@ -49,6 +50,25 @@ function login() {
         return false;
     }
 }
+
+// Funktion för att växla mörkt läge
+function toggleDarkMode() {
+    document.body.classList.toggle('dark-mode');
+  }
+
+  function showTerms() {
+    // Visa modalrutan för användarvillkoren
+    var modal = document.getElementById('termsModal');
+    modal.style.display = 'block';
+  }
+
+  function hideTerms() {
+    // Dölj modalrutan för användarvillkoren
+    var modal = document.getElementById('termsModal');
+    modal.style.display = 'none';
+  }
+
+
 
 // Funktion för att hämta kryptopriser från API
 async function fetchCryptoPrices() {
