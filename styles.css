@@ -33,6 +33,44 @@ main {
   padding: 20px;
 }
 
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.container img {
+  width: 50%; /* Justera bredden efter behov */
+  max-width: 500px; /* Ange maxbredden för bilden */
+  height: auto; /* Bevara proportioner */
+  margin-right: 20px; /* Lägg till ett mellanrum mellan bilden och texten */
+  border: 2px solid #fff; /* Vit border runt bilden */
+  border-radius: 10px; /* Runda kanter för bilden */
+}
+
+.container .text {
+  flex: 1 1 50%;
+  text-align: left;
+  padding: 20px;
+  background-color: #f2f2f2; /* Ljusgrå bakgrundsfärg för texten */
+  border-radius: 10px; /* Runda kanter för texten */
+}
+
+@media (max-width: 768px) {
+  .container img {
+    width: 100%; /* Göm margin för mobilskärmar */
+    margin-right: 0; /* Ta bort mellanrummet för mobilskärmar */
+    margin-bottom: 20px; /* Lägg till ett mellanrum mellan bilden och texten för mobilskärmar */
+  }
+
+  .container .text {
+    text-align: center;
+    padding: 0;
+  }
+}
+
 table {
   margin: 0 auto;
   width: 80%;
@@ -97,7 +135,8 @@ body.dark-mode footer {
   border-top: 5px solid #222;
 }
 
-button {
+button,
+a.button {
   background-color: #ffffff;
   border: none;
   color: black;
@@ -108,19 +147,24 @@ button {
   transition-duration: 0.4s;
   cursor: pointer;
   border-radius: 5px;
+  display: inline-block;
+  text-decoration: none;
 }
 
-button:hover {
+button:hover,
+a.button:hover {
   background-color: #d6d6d6;
   transform: scale(1.1);
 }
 
-body.dark-mode button {
+body.dark-mode button,
+body.dark-mode a.button {
   background-color: #333;
   color: #ffffff;
 }
 
-body.dark-mode button:hover {
+body.dark-mode button:hover,
+body.dark-mode a.button:hover {
   background-color: #444;
 }
 

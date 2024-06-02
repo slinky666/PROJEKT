@@ -30,31 +30,26 @@
             <th>Förändring (24h)</th>
           </tr>
         </thead>
-        <tbody>
-          <tr>
-            <td>Bitcoin</td>
-            <td id="bitcoin-price">Loading...</td>
-            <td id="bitcoin-change">Loading...</td>
-          </tr>
-          <tr>
-            <td>Ethereum</td>
-            <td id="ethereum-price">Loading...</td>
-            <td id="ethereum-change">Loading...</td>
-          </tr>
-          <tr>
-            <td>Litecoin</td>
-            <td id="litecoin-price">Loading...</td>
-            <td id="litecoin-change">Loading...</td>
-          </tr>
-          <tr>
-            <td>Dogecoin</td>
-            <td id="dogecoin-price">Loading...</td>
-            <td id="dogecoin-change">Loading...</td>
-          </tr>
+        <tbody id="crypto-table">
+          <!-- Inga kryptovalutor från början -->
         </tbody>
       </table>
-      <div id="news-artiklar">
-        <p>Laddar nyheter...</p>
+      <div></div>
+        <p>Max 5 Kryptovalutor åt gången...</p>
+      </div>
+      <div id="crypto-dropdown">
+        <select id="crypto-options">
+          <option value="bitcoin">Bitcoin</option>
+          <option value="ethereum">Ethereum</option>
+          <option value="litecoin">Litecoin</option>
+          <option value="dogecoin">Dogecoin</option>
+          <option value="chainlink">Chainlink</option>
+          <option value="solana">Solana</option>
+          <option value="binancecoin">Binance Coin</option>
+          <option value="shiba-inu">Shiba Inu</option>
+          <option value="bitcoin-cash">Bitcoin Cash</option>
+        </select>
+        <button onclick="addCrypto()">Lägg till</button>
       </div>
     </main>
 
